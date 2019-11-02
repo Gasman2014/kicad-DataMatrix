@@ -64,8 +64,6 @@ class DataMatrixWizard(FootprintWizardBase.FootprintWizard):
         self.border = int(self.parameters['Barcode']['Border'])
         self.textHeight = int(self.parameters['Caption']['Height'])
         self.module.Value().SetText(str(self.Barcode))
-
-        self.useDataMatrix:
         self.dataMatrix = DataMatrixEncoder(str(self.Barcode)).matrix
 
     def _drawPixel(self, xposition, yposition):
